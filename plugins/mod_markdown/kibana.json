@@ -1,0 +1,13 @@
+{
+  "id": "modMarkdown",
+  "owner": {
+    "name": "Kibana Presentation",
+    "githubTeam": ""
+  },
+  "description": "Adds a markdown visualization type",
+  "version": "kibana",
+  "ui": true,
+  "server": true,
+  "requiredPlugins": ["expressions", "visualizations"],
+  "requiredBundles": ["expressions", "visDefaultEditor", "visualizations"]
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "group": "@kbn/optimizer bundle module count",
+    "id": "modMarkdown",
+    "value": 19
+  },
+  {
+    "group": "page load bundle size",
+    "id": "modMarkdown",
+    "value": 37986,
+    "limitConfigPath": "node_modules/@kbn/optimizer/limits.yml"
+  },
+  {
+    "group": "async chunks size",
+    "id": "modMarkdown",
+    "value": 38809
+  },
+  {
+    "group": "async chunk count",
+    "id": "modMarkdown",
+    "value": 2
+  },
+  {
+    "group": "miscellaneous assets size",
+    "id": "modMarkdown",
+    "value": 0
+  }
+]
