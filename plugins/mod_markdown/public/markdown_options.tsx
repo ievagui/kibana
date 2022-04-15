@@ -15,6 +15,8 @@ import {
   EuiFlexGroup,
   EuiFlexItem,
   EuiText,
+  EuiFormRow,
+  EuiFieldText,
 } from '@elastic/eui';
 import { FormattedMessage } from '@kbn/i18n-react';
 
@@ -35,37 +37,33 @@ function MarkdownOptions({ stateParams, setValue }: VisEditorOptionsProps<Markdo
             <EuiFlexItem grow={false}>
               <EuiTitle size="xs">
                 <h2>
-                  <label htmlFor="markdownVisInput">URL to API</label>
+                  <label htmlFor="markdownVisInput">API</label>
                 </h2>
               </EuiTitle>
             </EuiFlexItem>
-
-            <EuiFlexItem grow={false}>
-              <EuiText size="xs">
-                <EuiLink
-                  href="https://help.github.com/articles/github-flavored-markdown/"
-                  target="_blank"
-                >
-                  <FormattedMessage
-                    id="visTypeMarkdown.params.helpLinkLabel"
-                    defaultMessage="Help"
-                  />
-                </EuiLink>
-              </EuiText>
-            </EuiFlexItem>
           </EuiFlexGroup>
         </EuiFlexItem>
-
         <EuiFlexItem>
-          <EuiTextArea
-            id="markdownVisInput"
-            className="visEditor--markdown__textarea"
-            value={stateParams.markdown}
-            onChange={onMarkdownUpdate}
-            fullWidth={true}
-            data-test-subj="markdownTextarea"
-            resize="none"
-          />
+          <EuiFormRow fullWidth label="Link to API"> 
+            <EuiFieldText
+              id="markdownVisInput"
+              className="visEditor--markdown__textarea"
+              value={stateParams.markdown}
+              onChange={onMarkdownUpdate}
+              fullWidth={true}
+              data-test-subj="markdownTextarea"
+              resize="none"
+            />
+          </EuiFormRow>
+        </EuiFlexItem>
+        <EuiFlexItem>
+          <EuiFormRow fullWidth label="Control Label"> 
+            <EuiFieldText
+              fullWidth={true}
+              data-test-subj="markdownTextarea"
+              resize="none"
+            />
+          </EuiFormRow>
         </EuiFlexItem>
       </EuiFlexGroup>
     </EuiPanel>

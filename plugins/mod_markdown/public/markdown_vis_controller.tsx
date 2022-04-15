@@ -38,7 +38,9 @@ import {
 interface MarkdownVisComponentProps extends MarkdownVisParams {
   renderComplete: () => void;
 }
-/*
+
+
+
 const MarkdownVisComponent = ({
   fontSize,
   markdown,
@@ -46,7 +48,19 @@ const MarkdownVisComponent = ({
   renderComplete,
 }: MarkdownVisComponentProps) => {
   useEffect(renderComplete); // renderComplete will be called after each render to signal, that we are done with rendering.
-*/
+
+  console.log(markdown);
+  return (markdown);
+    /*
+    <div className="mkdVis" style={{ fontSize: `${fontSize}pt` }}>
+      <Markdown
+        data-test-subj="markdownBody"
+        markdown={markdown}
+        openLinksInNewTab={openLinksInNewTab}
+      />
+    </div>
+    */
+};
 
 class MarkdownVisClass extends React.Component{
   //useEffect(renderComplete); // renderComplete will be called after each render to signal, that we are done with rendering.
@@ -74,36 +88,30 @@ class MarkdownVisClass extends React.Component{
     this.getAge(this.state.value);
   }
 
-  private onHandleChange(event) {
-    this.setState({value: event.target.value});
-    this.getAge(event.target.value);
-    event.preventDefault();
-  }
+  //private onHandleChange(event) {
+  //  this.setState({value: event.target.value});
+  //  event.preventDefault();
+  //}
 
   private getAge(val){
     fetch("https://api.agify.io/?name=" + val)
       .then(res => res.json())
       .then(
         (response) => {
-          this.setState({
-            age: response.age
-          });
+          if(response.age != null){
+            this.setState({age: response.age});
+          }else{
+            this.setState({age: "no such client"});
+          }
         });
   }
 
   public render()
   //{return(<p>hello</p>);}
   {
-    
     return (
       <div className="mkdVis">
-        <p>
-          <FormattedMessage
-            id="testVisPlugin.content"
-            defaultMessage="Enter client name"
-          />
-        </p>
-        <EuiFormRow fullWidth>
+        <EuiFormRow fullWidth label="Client name">
           <EuiFlexGroup>
             <EuiFlexItem>
               <EuiFieldText
@@ -122,7 +130,11 @@ class MarkdownVisClass extends React.Component{
             </EuiFlexItem>
           </EuiFlexGroup>
         </EuiFormRow>
-        <p>Predicted age: {this.state.age}</p>
+        <EuiText grow={false}>
+          <p>
+            Predicted age: {this.state.age}
+          </p>
+        </EuiText>
       </div>
     );
   }
@@ -131,5 +143,5 @@ class MarkdownVisClass extends React.Component{
 
 // default export required for React.Lazy
 // eslint-disable-next-line import/no-default-export
-export { MarkdownVisClass as default };
+export { MarkdownVisClass as default};
 //<p>aa{this.aa.markdown}bb</p>

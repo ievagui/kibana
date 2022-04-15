@@ -14,6 +14,7 @@ import { MarkdownVisRenderValue } from './markdown_fn';
 
 // @ts-ignore
 const MarkdownVisComponent = lazy(() => import('./markdown_vis_controller'));
+//import MarkdownVisComponent from './markdown_vis_controller';
 
 export const markdownVisRenderer: ExpressionRenderDefinition<MarkdownVisRenderValue> = {
   name: 'markdown_vis',
