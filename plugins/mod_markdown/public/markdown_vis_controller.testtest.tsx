@@ -9,6 +9,7 @@
 import React, { useEffect } from 'react';
 import { Markdown } from '../../../src/plugins/kibana_react/public';
 import { MarkdownVisParams } from './types';
+import axios from 'axios'
 
 import './markdown_vis.scss';
 
@@ -39,7 +40,7 @@ interface MarkdownVisComponentProps extends MarkdownVisParams {
   renderComplete: () => void;
 }
 
-function getAge(val){
+/*function getAge(val){
     fetch("https://api.agify.io/?name=" + val)
       .then(res => res.json())
       .then(
@@ -50,7 +51,9 @@ function getAge(val){
           console.log(response.age)
           return(response.age);
         });
-  }
+  }*/
+
+
 
 const MarkdownVisComponent = ({
   fontSize,
@@ -59,10 +62,21 @@ const MarkdownVisComponent = ({
   renderComplete,
 }: MarkdownVisComponentProps) => {
   useEffect(renderComplete); // renderComplete will be called after each render to signal, that we are done with rendering.
-  console.log(getAge(markdown))
+  //console.log(getAge(markdown))
+  /*
+  const buttonClick = async() => {
+    const data = await.get('https://api.agify.io/?name=' + name)
+  }
+
+*/
+  const buttonClick = async(name) => {
+    const data = await axios.get('https://api.agify.io/?name=' + name);
+    return data;
+  }
+
   return (
     <div className="mkdVis" style={{ fontSize: `${fontSize}pt` }}>
-      <p>Hello {getAge({markdown})}</p>
+      <p>Hello {buttonClick({markdown})}</p>
     </div>
   );
 };

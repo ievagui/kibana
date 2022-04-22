@@ -12,7 +12,7 @@ import { MarkdownVisExpressionFunctionDefinition } from './markdown_fn';
 import { MarkdownVisParams } from './types';
 
 export const toExpressionAst: VisToExpressionAst<MarkdownVisParams> = (vis) => {
-  const { markdown, fontSize, openLinksInNewTab } = vis.params;
+  const { markdown, fontSize, openLinksInNewTab, controlLabel } = vis.params;
 
   const markdownVis = buildExpressionFunction<MarkdownVisExpressionFunctionDefinition>(
     'markdownVis',
@@ -20,6 +20,7 @@ export const toExpressionAst: VisToExpressionAst<MarkdownVisParams> = (vis) => {
       markdown,
       font: buildExpression(`font size=${fontSize}`),
       openLinksInNewTab,
+      controlLabel,
     }
   );
 

@@ -76,7 +76,7 @@ class MarkdownVisClass extends React.Component{
       age: '',
     };
     this.onClickHandler = this.onClickHandler.bind(this);
-    this.onHandleChange = this.onHandleChange.bind(this);
+    //this.onHandleChange = this.onHandleChange.bind(this);
   }
 
   //private MarkdownVisComponent({fontSize, markdown, openLinksInNewTab, renderComplete,}: MarkdownVisComponentProps){
@@ -88,10 +88,10 @@ class MarkdownVisClass extends React.Component{
     this.getAge(this.state.value);
   }
 
-  private onHandleChange(event) {
-    this.setState({value: event.target.value});
-    event.preventDefault();
-  }
+  //private onHandleChange(event) {
+  //  this.setState({value: event.target.value});
+  //  event.preventDefault();
+  //}
 
   private getAge(val){
     fetch("https://api.agify.io/?name=" + val)
@@ -101,7 +101,7 @@ class MarkdownVisClass extends React.Component{
           if(response.age != null){
             this.setState({age: response.age});
           }else{
-            this.setState({age: "no such client"});
+            this.setState({age: ""});
           }
         });
   }

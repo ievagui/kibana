@@ -19,13 +19,14 @@ export const markdownVisDefinition: VisTypeDefinition<MarkdownVisParams> = {
   name: 'mod_markdown',
   title: 'Modified Markdown',
   isAccessible: true,
-  icon: 'visText',
+  // icon location /home/ieva/Documents/elasticsearch/kibana_plugin/kibana/node_modules/@elastic/eui/lib/components/icon/svgs
+  icon: 'bolt',
   group: VisGroups.TOOLS,
   titleInWizard: i18n.translate('visTypeMarkdown.markdownTitleInWizard', {
-    defaultMessage: 'Mod Text',
+    defaultMessage: 'API Call',
   }),
   description: i18n.translate('visTypeMarkdown.markdownDescription', {
-    defaultMessage: 'Add text and images to your dashboard.',
+    defaultMessage: 'Call an API to do stuff.',
   }),
   toExpressionAst,
   visConfig: {
@@ -33,6 +34,7 @@ export const markdownVisDefinition: VisTypeDefinition<MarkdownVisParams> = {
       fontSize: 12,
       openLinksInNewTab: false,
       markdown: '',
+      controlLabel: '',
     },
   },
   editorConfig: {

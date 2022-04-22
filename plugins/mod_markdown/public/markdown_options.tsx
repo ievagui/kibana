@@ -29,6 +29,11 @@ function MarkdownOptions({ stateParams, setValue }: VisEditorOptionsProps<Markdo
     [setValue]
   );
 
+  const onControlLabelUpdate = useCallback(
+    ({ target: { value } }: React.ChangeEvent<HTMLTextAreaElement>) => setValue('controlLabel', value),
+    [setValue]
+  );
+
   return (
     <EuiPanel paddingSize="s">
       <EuiFlexGroup direction="column" gutterSize="m" className="mkdEditor">
@@ -59,7 +64,10 @@ function MarkdownOptions({ stateParams, setValue }: VisEditorOptionsProps<Markdo
         <EuiFlexItem>
           <EuiFormRow fullWidth label="Control Label"> 
             <EuiFieldText
+              id="markdownVisInput"
               fullWidth={true}
+              value={stateParams.controlLabel}
+              onChange={onControlLabelUpdate}
               data-test-subj="markdownTextarea"
               resize="none"
             />

@@ -12,10 +12,12 @@ export interface Arguments {
   markdown: string;
   font: Style;
   openLinksInNewTab: boolean;
+  controlLabel: string;
 }
 
 export interface MarkdownVisParams {
   markdown: Arguments['markdown'];
   openLinksInNewTab: Arguments['openLinksInNewTab'];
   fontSize: number;
+  controlLabel: Arguments['controlLabel'];
 }

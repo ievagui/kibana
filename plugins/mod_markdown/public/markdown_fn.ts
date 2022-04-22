@@ -52,6 +52,13 @@ export const createMarkdownVisFn = (): MarkdownVisExpressionFunctionDefinition =
         defaultMessage: 'Opens links in new tab',
       }),
     },
+    controlLabel: {
+      types: ['string'],
+      required: true,
+      help: i18n.translate('visTypeMarkdown.function.controlLabel.help', {
+        defaultMessage: 'Control Label',
+      }),
+    },
   },
   fn(input, args) {
     return {
@@ -63,6 +70,7 @@ export const createMarkdownVisFn = (): MarkdownVisExpressionFunctionDefinition =
           markdown: args.markdown,
           openLinksInNewTab: args.openLinksInNewTab,
           fontSize: parseInt(args.font.spec.fontSize || '12', 10),
+          controlLabel: args.controlLabel,
         },
       },
     };
