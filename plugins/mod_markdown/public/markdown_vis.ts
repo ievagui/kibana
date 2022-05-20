@@ -46,13 +46,14 @@ export const markdownVisDefinition: VisTypeDefinition<MarkdownVisParams> = {
         }),
         editor: MarkdownOptions,
       },
-      {
+      // uncomment to allow settings options
+      /*{
         name: 'options',
         title: i18n.translate('visTypeMarkdown.tabs.optionsText', {
           defaultMessage: 'Options',
         }),
         editor: SettingsOptions,
-      },
+      },*/
     ],
     enableAutoApply: true,
     defaultSize: DefaultEditorSize.LARGE,

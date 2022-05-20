@@ -11,7 +11,7 @@
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, "/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\n * 1. Focus rings shouldn't be visible on scrollable regions, but a11y requires them to be focusable.\n *    Browser's supporting `:focus-visible` will still show outline on keyboard focus only.\n *    Others like Safari, won't show anything at all.\n * 2. Force the `:focus-visible` when the `tabindex=0` (is tabbable)\n */\n/*\n * Creates the Amsterdam style of button with a transparent background\n */\n/*\n * Creates the Amsterdam style of fill button\n */\n.mkdVis {\n  padding: 8px;\n  width: 100%; }\n\n.visEditor--markdown .visEditorSidebar__config > *,\n.visEditor--markdown .visEditor--markdown__textarea {\n  flex-grow: 1; }\n\n.visEditor--markdown .mkdEditor {\n  height: 100%; }\n", "",{"version":3,"sources":["markdown_vis.scss"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;;;EAsBE;AACF;;;;;;;;;;;;;;;;;;;;;;EAsBE;AACF;;;;;EAKE;AACF;;EAEE;AACF;;EAEE;AACF;EACE,YAAY;EACZ,WAAW,EAAE;;AAEf;;EAEE,YAAY,EAAE;;AAEhB;EACE,YAAY,EAAE","file":"markdown_vis.scss","sourcesContent":["/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\n * 1. Focus rings shouldn't be visible on scrollable regions, but a11y requires them to be focusable.\n *    Browser's supporting `:focus-visible` will still show outline on keyboard focus only.\n *    Others like Safari, won't show anything at all.\n * 2. Force the `:focus-visible` when the `tabindex=0` (is tabbable)\n */\n/*\n * Creates the Amsterdam style of button with a transparent background\n */\n/*\n * Creates the Amsterdam style of fill button\n */\n.mkdVis {\n  padding: 8px;\n  width: 100%; }\n\n.visEditor--markdown .visEditorSidebar__config > *,\n.visEditor--markdown .visEditor--markdown__textarea {\n  flex-grow: 1; }\n\n.visEditor--markdown .mkdEditor {\n  height: 100%; }\n"]}]);
+exports.push([module.i, "/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\n * 1. Focus rings shouldn't be visible on scrollable regions, but a11y requires them to be focusable.\n *    Browser's supporting `:focus-visible` will still show outline on keyboard focus only.\n *    Others like Safari, won't show anything at all.\n * 2. Force the `:focus-visible` when the `tabindex=0` (is tabbable)\n */\n/*\n * Creates the Amsterdam style of button with a transparent background\n */\n/*\n * Creates the Amsterdam style of fill button\n */\n.mkdVis {\n  padding: 8px;\n  width: 100%; }\n\n.visEditor--markdown .visEditorSidebar__config > *,\n.visEditor--markdown .visEditor--markdown__textarea {\n  flex-grow: 1; }\n\n.visEditor--markdown .mkdEditor {\n  height: 100%; }\n\n.testClass {\n  padding: 15px 15px 15px 15px; }\n", "",{"version":3,"sources":["markdown_vis.scss"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;;;EAsBE;AACF;;;;;;;;;;;;;;;;;;;;;;EAsBE;AACF;;;;;EAKE;AACF;;EAEE;AACF;;EAEE;AACF;EACE,YAAY;EACZ,WAAW,EAAE;;AAEf;;EAEE,YAAY,EAAE;;AAEhB;EACE,YAAY,EAAE;;AAEhB;EACE,4BAA4B,EAAE","file":"markdown_vis.scss","sourcesContent":["/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\n * 1. Focus rings shouldn't be visible on scrollable regions, but a11y requires them to be focusable.\n *    Browser's supporting `:focus-visible` will still show outline on keyboard focus only.\n *    Others like Safari, won't show anything at all.\n * 2. Force the `:focus-visible` when the `tabindex=0` (is tabbable)\n */\n/*\n * Creates the Amsterdam style of button with a transparent background\n */\n/*\n * Creates the Amsterdam style of fill button\n */\n.mkdVis {\n  padding: 8px;\n  width: 100%; }\n\n.visEditor--markdown .visEditorSidebar__config > *,\n.visEditor--markdown .visEditor--markdown__textarea {\n  flex-grow: 1; }\n\n.visEditor--markdown .mkdEditor {\n  height: 100%; }\n\n.testClass {\n  padding: 15px 15px 15px 15px; }\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -29,7 +29,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, "/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\n * 1. Focus rings shouldn't be visible on scrollable regions, but a11y requires them to be focusable.\n *    Browser's supporting `:focus-visible` will still show outline on keyboard focus only.\n *    Others like Safari, won't show anything at all.\n * 2. Force the `:focus-visible` when the `tabindex=0` (is tabbable)\n */\n/*\n * Creates the Amsterdam style of button with a transparent background\n */\n/*\n * Creates the Amsterdam style of fill button\n */\n.mkdVis {\n  padding: 8px;\n  width: 100%; }\n\n.visEditor--markdown .visEditorSidebar__config > *,\n.visEditor--markdown .visEditor--markdown__textarea {\n  flex-grow: 1; }\n\n.visEditor--markdown .mkdEditor {\n  height: 100%; }\n", "",{"version":3,"sources":["markdown_vis.scss"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;;;EAsBE;AACF;;;;;;;;;;;;;;;;;;;;;;EAsBE;AACF;;;;;EAKE;AACF;;EAEE;AACF;;EAEE;AACF;EACE,YAAY;EACZ,WAAW,EAAE;;AAEf;;EAEE,YAAY,EAAE;;AAEhB;EACE,YAAY,EAAE","file":"markdown_vis.scss","sourcesContent":["/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\n * 1. Focus rings shouldn't be visible on scrollable regions, but a11y requires them to be focusable.\n *    Browser's supporting `:focus-visible` will still show outline on keyboard focus only.\n *    Others like Safari, won't show anything at all.\n * 2. Force the `:focus-visible` when the `tabindex=0` (is tabbable)\n */\n/*\n * Creates the Amsterdam style of button with a transparent background\n */\n/*\n * Creates the Amsterdam style of fill button\n */\n.mkdVis {\n  padding: 8px;\n  width: 100%; }\n\n.visEditor--markdown .visEditorSidebar__config > *,\n.visEditor--markdown .visEditor--markdown__textarea {\n  flex-grow: 1; }\n\n.visEditor--markdown .mkdEditor {\n  height: 100%; }\n"]}]);
+exports.push([module.i, "/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\n * 1. Focus rings shouldn't be visible on scrollable regions, but a11y requires them to be focusable.\n *    Browser's supporting `:focus-visible` will still show outline on keyboard focus only.\n *    Others like Safari, won't show anything at all.\n * 2. Force the `:focus-visible` when the `tabindex=0` (is tabbable)\n */\n/*\n * Creates the Amsterdam style of button with a transparent background\n */\n/*\n * Creates the Amsterdam style of fill button\n */\n.mkdVis {\n  padding: 8px;\n  width: 100%; }\n\n.visEditor--markdown .visEditorSidebar__config > *,\n.visEditor--markdown .visEditor--markdown__textarea {\n  flex-grow: 1; }\n\n.visEditor--markdown .mkdEditor {\n  height: 100%; }\n\n.testClass {\n  padding: 15px 15px 15px 15px; }\n", "",{"version":3,"sources":["markdown_vis.scss"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;;;EAsBE;AACF;;;;;;;;;;;;;;;;;;;;;;EAsBE;AACF;;;;;EAKE;AACF;;EAEE;AACF;;EAEE;AACF;EACE,YAAY;EACZ,WAAW,EAAE;;AAEf;;EAEE,YAAY,EAAE;;AAEhB;EACE,YAAY,EAAE;;AAEhB;EACE,4BAA4B,EAAE","file":"markdown_vis.scss","sourcesContent":["/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\nThe MIT License (MIT)\n\nCopyright (c) 2015 strarsis https://github.com/strarsis/sass-math-pow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n */\n/**\n * 1. Focus rings shouldn't be visible on scrollable regions, but a11y requires them to be focusable.\n *    Browser's supporting `:focus-visible` will still show outline on keyboard focus only.\n *    Others like Safari, won't show anything at all.\n * 2. Force the `:focus-visible` when the `tabindex=0` (is tabbable)\n */\n/*\n * Creates the Amsterdam style of button with a transparent background\n */\n/*\n * Creates the Amsterdam style of fill button\n */\n.mkdVis {\n  padding: 8px;\n  width: 100%; }\n\n.visEditor--markdown .visEditorSidebar__config > *,\n.visEditor--markdown .visEditor--markdown__textarea {\n  flex-grow: 1; }\n\n.visEditor--markdown .mkdEditor {\n  height: 100%; }\n\n.testClass {\n  padding: 15px 15px 15px 15px; }\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -511,12 +511,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _markdown_vis_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./markdown_vis.scss */ "./public/markdown_vis.scss");
 /* harmony import */ var _markdown_vis_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_markdown_vis_scss__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _kbn_i18n_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @kbn/i18n-react */ "@kbn/i18n-react");
-/* harmony import */ var _kbn_i18n_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_kbn_i18n_react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _elastic_eui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @elastic/eui */ "@elastic/eui");
-/* harmony import */ var _elastic_eui__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_elastic_eui__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @emotion/react */ "@emotion/react");
-/* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_emotion_react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _elastic_eui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @elastic/eui */ "@elastic/eui");
+/* harmony import */ var _elastic_eui__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emotion/react */ "@emotion/react");
+/* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_emotion_react__WEBPACK_IMPORTED_MODULE_3__);
 /*
  * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
  * or more contributor license agreements. Licensed under the Elastic License
@@ -529,16 +527,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+//const MarkdownVisComponent = ({
+//fontSize,
+//  markdown,
+//  openLinksInNewTab,
+// renderComplete,
+//}: MarkdownVisComponentProps) => {
+//useEffect(renderComplete); // renderComplete will be called after each render to signal, that we are done with rendering.
+//console.log(markdown);
+//return (markdown);
 
 /*
-const MarkdownVisComponent = ({
-  fontSize,
-  markdown,
-  openLinksInNewTab,
-  renderComplete,
-}: MarkdownVisComponentProps) => {
-  useEffect(renderComplete); // renderComplete will be called after each render to signal, that we are done with rendering.
+<div className="mkdVis" style={{ fontSize: `${fontSize}pt` }}>
+  <Markdown
+    data-test-subj="markdownBody"
+    markdown={markdown}
+    openLinksInNewTab={openLinksInNewTab}
+  />
+</div>
 */
+//};
 class MarkdownVisClass extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   //useEffect(renderComplete); // renderComplete will be called after each render to signal, that we are done with rendering.
   constructor(props) {
@@ -550,55 +558,96 @@ class MarkdownVisClass extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       buttonPushed: false,
       age: ''
     };
-    this.onClickHandler = this.onClickHandler.bind(this);
-    this.onHandleChange = this.onHandleChange.bind(this);
+    this.onClickHandler = this.onClickHandler.bind(this); //this.onHandleChange = this.onHandleChange.bind(this);
   } //private MarkdownVisComponent({fontSize, markdown, openLinksInNewTab, renderComplete,}: MarkdownVisComponentProps){
   //  console.log(markdown)
   //}
 
 
   onClickHandler() {
-    //this.setState({buttonPushed: !this.state.buttonPushed});
     this.getAge(this.state.value);
-  }
-
-  onHandleChange(event) {
     this.setState({
-      value: event.target.value
+      buttonPushed: true
     });
-    this.getAge(event.target.value);
-    event.preventDefault();
-  }
+  } //private onHandleChange(event) {
+  //  this.setState({value: event.target.value});
+  //  event.preventDefault();
+  //}
+
 
   getAge(val) {
-    fetch("https://api.agify.io/?name=" + val).then(res => res.json()).then(response => {
-      this.setState({
-        age: response.age
-      });
+    //fetch("https://api.agify.io/?name=" + val)
+    fetch(this.props.markdown + val).then(res => res.json()).then(response => {
+      if (response.age != null) {
+        this.setState({
+          age: response.age
+        });
+      } else {
+        this.setState({
+          age: ""
+        });
+      }
     });
-  }
+  } // neveikia
+
+  /*
+    private renderKQ(){
+      return(
+  <div>
+      <EuiFlexGroup gutterSize="none" >
+              
+              <EuiFlexItem fullWidth>
+                <EuiCodeBlock fontSize="m" paddingSize="m" isCopyable>
+                  client_id.keyword: "{this.state.age}"
+                </EuiCodeBlock>
+              </EuiFlexItem>
+            </EuiFlexGroup>
+            </div>);
+    }*/
+
 
   render() //{return(<p>hello</p>);}
   {
-    return Object(_emotion_react__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
-      className: "mkdVis"
-    }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_4__["jsx"])("p", null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_kbn_i18n_react__WEBPACK_IMPORTED_MODULE_2__["FormattedMessage"], {
-      id: "testVisPlugin.content",
-      defaultMessage: "Enter client name"
-    })), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_3__["EuiFormRow"], {
-      fullWidth: true
-    }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_3__["EuiFlexGroup"], null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_3__["EuiFlexItem"], null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_3__["EuiFieldText"], {
-      name: "first",
+    let label;
+
+    if (this.props.controlLabel == "") {
+      label = "label";
+    } else {
+      label = this.props.controlLabel;
+    }
+
+    return Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+      className: "mkdVis",
+      style: {
+        fontSize: `${this.props.fontSize}pt`
+      }
+    }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiFormRow"], {
       fullWidth: true,
+      label: label
+    }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiFlexGroup"], null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiFlexItem"], null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiFieldText"], {
+      name: "first",
+      fullWidth: true //prepend="Name"
+      ,
       value: this.state.value,
       onChange: event => this.setState({
         value: event.target.value
       })
-    })), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_3__["EuiFlexItem"], {
+    })), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiFlexItem"], {
       grow: false
-    }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_3__["EuiButton"], {
+    }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiButton"] //fill
+    , {
       onClick: this.onClickHandler
-    }, "Search")))), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_4__["jsx"])("p", null, "Predicted age: ", this.state.age));
+    }, "Search")))), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiSpacer"], {
+      size: "m"
+    }), this.state.buttonPushed && this.state.age ? Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiFlexGroup"], {
+      gutterSize: "none"
+    }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiFlexItem"], {
+      fullWidth: true
+    }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiCodeBlock"], {
+      fontSize: "m",
+      paddingSize: "m",
+      isCopyable: true
+    }, "client_id.keyword: \"", this.state.age, "\""))) : null);
   }
 
 } //}
@@ -607,6 +656,8 @@ class MarkdownVisClass extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
 
 
  //<p>aa{this.aa.markdown}bb</p>
+//<div className="testClass" style={{"background-color":"#e6f0f7"}}>
+//<EuiFlexItem>Predicted age: {this.state.age}</EuiFlexItem>
 
 /***/ })
 

@@ -33,6 +33,8 @@ import {
   EuiFieldText,
   EmbeddableRenderer,
   EuiPanel,
+  EuiSpacer,
+  EuiCodeBlock,
 } from '@elastic/eui';
 
 interface MarkdownVisComponentProps extends MarkdownVisParams {
@@ -84,8 +86,8 @@ class MarkdownVisClass extends React.Component{
   //}
 
   private onClickHandler() {
-    //this.setState({buttonPushed: !this.state.buttonPushed});
     this.getAge(this.state.value);
+    this.setState({buttonPushed: true});
   }
 
   //private onHandleChange(event) {
@@ -106,24 +108,47 @@ class MarkdownVisClass extends React.Component{
           }
         });
   }
+  // neveikia
+/*
+  private renderKQ(){
+    return(
+<div>
+    <EuiFlexGroup gutterSize="none" >
+            
+            <EuiFlexItem fullWidth>
+              <EuiCodeBlock fontSize="m" paddingSize="m" isCopyable>
+                client_id.keyword: "{this.state.age}"
+              </EuiCodeBlock>
+            </EuiFlexItem>
+          </EuiFlexGroup>
+          </div>);
+  }*/
 
   public render()
   //{return(<p>hello</p>);}
   {
+    let label;
+    if(this.props.controlLabel == ""){
+      label = "label";
+    } else {
+      label = this.props.controlLabel;
+    }
     return (
       <div className="mkdVis" style={{ fontSize: `${this.props.fontSize}pt` }}>
-        <EuiFormRow fullWidth label={this.props.controlLabel}>
+        <EuiFormRow fullWidth label={label}>
           <EuiFlexGroup>
             <EuiFlexItem>
               <EuiFieldText
                 name="first"
                 fullWidth
+                //prepend="Name"
                 value={this.state.value}
                 onChange={(event) => this.setState({value: event.target.value})}
               />
             </EuiFlexItem>
             <EuiFlexItem grow={false}>
               <EuiButton
+                //fill
                 onClick={this.onClickHandler}
               >
                 Search
@@ -131,11 +156,16 @@ class MarkdownVisClass extends React.Component{
             </EuiFlexItem>
           </EuiFlexGroup>
         </EuiFormRow>
-        <EuiText grow={false}>
-          <p>
-            Predicted age: {this.state.age}
-          </p>
-        </EuiText>
+        <EuiSpacer size="m" />
+        {this.state.buttonPushed && this.state.age ?
+          <EuiFlexGroup gutterSize="none">
+            <EuiFlexItem fullWidth>
+              <EuiCodeBlock fontSize="m" paddingSize="m" isCopyable>
+                client_id.keyword: "{this.state.age}"
+              </EuiCodeBlock>
+            </EuiFlexItem>
+          </EuiFlexGroup> :
+          null}
       </div>
     );
   }
@@ -146,3 +176,5 @@ class MarkdownVisClass extends React.Component{
 // eslint-disable-next-line import/no-default-export
 export { MarkdownVisClass as default};
 //<p>aa{this.aa.markdown}bb</p>
+//<div className="testClass" style={{"background-color":"#e6f0f7"}}>
+//<EuiFlexItem>Predicted age: {this.state.age}</EuiFlexItem>

@@ -319,6 +319,13 @@ const createMarkdownVisFn = () => ({
       help: _kbn_i18n__WEBPACK_IMPORTED_MODULE_0__["i18n"].translate('visTypeMarkdown.function.openLinksInNewTab.help', {
         defaultMessage: 'Opens links in new tab'
       })
+    },
+    controlLabel: {
+      types: ['string'],
+      required: true,
+      help: _kbn_i18n__WEBPACK_IMPORTED_MODULE_0__["i18n"].translate('visTypeMarkdown.function.controlLabel.help', {
+        defaultMessage: 'Control Label'
+      })
     }
   },
 
@@ -331,7 +338,8 @@ const createMarkdownVisFn = () => ({
         visParams: {
           markdown: args.markdown,
           openLinksInNewTab: args.openLinksInNewTab,
-          fontSize: parseInt(args.font.spec.fontSize || '12', 10)
+          fontSize: parseInt(args.font.spec.fontSize || '12', 10),
+          controlLabel: args.controlLabel
         }
       }
     };
@@ -355,10 +363,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _elastic_eui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @elastic/eui */ "@elastic/eui");
 /* harmony import */ var _elastic_eui__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _kbn_i18n_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @kbn/i18n-react */ "@kbn/i18n-react");
-/* harmony import */ var _kbn_i18n_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_kbn_i18n_react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emotion/react */ "@emotion/react");
-/* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_emotion_react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emotion/react */ "@emotion/react");
+/* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_emotion_react__WEBPACK_IMPORTED_MODULE_2__);
 /*
  * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
  * or more contributor license agreements. Licensed under the Elastic License
@@ -366,7 +372,6 @@ __webpack_require__.r(__webpack_exports__);
  * in compliance with, at your election, the Elastic License 2.0 or the Server
  * Side Public License, v 1.
  */
-
 
 
 
@@ -380,35 +385,33 @@ function MarkdownOptions({
       value
     }
   }) => setValue('markdown', value), [setValue]);
-  return Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiPanel"], {
+  const onControlLabelUpdate = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(({
+    target: {
+      value
+    }
+  }) => setValue('controlLabel', value), [setValue]);
+  return Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiPanel"], {
     paddingSize: "s"
-  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexGroup"], {
+  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexGroup"], {
     direction: "column",
     gutterSize: "m",
     className: "mkdEditor"
-  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexItem"], {
+  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexItem"], {
     grow: false
-  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexGroup"], {
+  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexGroup"], {
     gutterSize: "none",
     justifyContent: "spaceBetween",
     alignItems: "baseline"
-  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexItem"], {
+  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexItem"], {
     grow: false
-  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiTitle"], {
+  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiTitle"], {
     size: "xs"
-  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])("h2", null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])("label", {
+  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])("h2", null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])("label", {
     htmlFor: "markdownVisInput"
-  }, "URL to API")))), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexItem"], {
-    grow: false
-  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiText"], {
-    size: "xs"
-  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiLink"], {
-    href: "https://help.github.com/articles/github-flavored-markdown/",
-    target: "_blank"
-  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_kbn_i18n_react__WEBPACK_IMPORTED_MODULE_2__["FormattedMessage"], {
-    id: "visTypeMarkdown.params.helpLinkLabel",
-    defaultMessage: "Help"
-  })))))), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexItem"], null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiTextArea"], {
+  }, "API")))))), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexItem"], null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFormRow"], {
+    fullWidth: true,
+    label: "Link to API"
+  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFieldText"], {
     id: "markdownVisInput",
     className: "visEditor--markdown__textarea",
     value: stateParams.markdown,
@@ -416,7 +419,17 @@ function MarkdownOptions({
     fullWidth: true,
     "data-test-subj": "markdownTextarea",
     resize: "none"
-  }))));
+  }))), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexItem"], null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFormRow"], {
+    fullWidth: true,
+    label: "Control Label"
+  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFieldText"], {
+    id: "markdownVisInput",
+    fullWidth: true,
+    value: stateParams.controlLabel,
+    onChange: onControlLabelUpdate,
+    "data-test-subj": "markdownTextarea",
+    resize: "none"
+  })))));
 }
 
 
@@ -457,7 +470,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // @ts-ignore
-const MarkdownVisComponent = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_1__["lazy"])(() => __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./markdown_vis_controller */ "./public/markdown_vis_controller.tsx")));
+const MarkdownVisComponent = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_1__["lazy"])(() => __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./markdown_vis_controller */ "./public/markdown_vis_controller.tsx"))); //import MarkdownVisComponent from './markdown_vis_controller';
+
 const markdownVisRenderer = {
   name: 'markdown_vis',
   displayName: 'markdown visualization',
@@ -492,12 +506,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _kbn_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @kbn/i18n */ "@kbn/i18n");
 /* harmony import */ var _kbn_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_kbn_i18n__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _markdown_options__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./markdown_options */ "./public/markdown_options.tsx");
-/* harmony import */ var _settings_options_lazy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./settings_options_lazy */ "./public/settings_options_lazy.tsx");
-/* harmony import */ var _src_plugins_vis_default_editor_public__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../src/plugins/vis_default_editor/public */ "plugin/visDefaultEditor/public");
-/* harmony import */ var _src_plugins_vis_default_editor_public__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_src_plugins_vis_default_editor_public__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _src_plugins_visualizations_public__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../src/plugins/visualizations/public */ "plugin/visualizations/public");
-/* harmony import */ var _src_plugins_visualizations_public__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_src_plugins_visualizations_public__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _to_ast__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./to_ast */ "./public/to_ast.ts");
+/* harmony import */ var _src_plugins_vis_default_editor_public__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../src/plugins/vis_default_editor/public */ "plugin/visDefaultEditor/public");
+/* harmony import */ var _src_plugins_vis_default_editor_public__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_src_plugins_vis_default_editor_public__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _src_plugins_visualizations_public__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../src/plugins/visualizations/public */ "plugin/visualizations/public");
+/* harmony import */ var _src_plugins_visualizations_public__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_src_plugins_visualizations_public__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _to_ast__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./to_ast */ "./public/to_ast.ts");
 /*
  * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
  * or more contributor license agreements. Licensed under the Elastic License
@@ -510,25 +523,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 const markdownVisDefinition = {
   name: 'mod_markdown',
   title: 'Modified Markdown',
   isAccessible: true,
-  icon: 'visText',
-  group: _src_plugins_visualizations_public__WEBPACK_IMPORTED_MODULE_4__["VisGroups"].TOOLS,
+  // icon location /home/ieva/Documents/elasticsearch/kibana_plugin/kibana/node_modules/@elastic/eui/lib/components/icon/svgs
+  icon: 'bolt',
+  group: _src_plugins_visualizations_public__WEBPACK_IMPORTED_MODULE_3__["VisGroups"].TOOLS,
   titleInWizard: _kbn_i18n__WEBPACK_IMPORTED_MODULE_0__["i18n"].translate('visTypeMarkdown.markdownTitleInWizard', {
-    defaultMessage: 'Mod Text'
+    defaultMessage: 'API Call'
   }),
   description: _kbn_i18n__WEBPACK_IMPORTED_MODULE_0__["i18n"].translate('visTypeMarkdown.markdownDescription', {
-    defaultMessage: 'Add text and images to your dashboard.'
+    defaultMessage: 'Call an API to do stuff.'
   }),
-  toExpressionAst: _to_ast__WEBPACK_IMPORTED_MODULE_5__["toExpressionAst"],
+  toExpressionAst: _to_ast__WEBPACK_IMPORTED_MODULE_4__["toExpressionAst"],
   visConfig: {
     defaults: {
       fontSize: 12,
       openLinksInNewTab: false,
-      markdown: ''
+      markdown: '',
+      controlLabel: ''
     }
   },
   editorConfig: {
@@ -538,15 +552,18 @@ const markdownVisDefinition = {
         defaultMessage: 'Data'
       }),
       editor: _markdown_options__WEBPACK_IMPORTED_MODULE_1__["MarkdownOptions"]
-    }, {
+    } // uncomment to allow settings options
+
+    /*{
       name: 'options',
-      title: _kbn_i18n__WEBPACK_IMPORTED_MODULE_0__["i18n"].translate('visTypeMarkdown.tabs.optionsText', {
-        defaultMessage: 'Options'
+      title: i18n.translate('visTypeMarkdown.tabs.optionsText', {
+        defaultMessage: 'Options',
       }),
-      editor: _settings_options_lazy__WEBPACK_IMPORTED_MODULE_2__["SettingsOptions"]
-    }],
+      editor: SettingsOptions,
+    },*/
+    ],
     enableAutoApply: true,
-    defaultSize: _src_plugins_vis_default_editor_public__WEBPACK_IMPORTED_MODULE_3__["DefaultEditorSize"].LARGE
+    defaultSize: _src_plugins_vis_default_editor_public__WEBPACK_IMPORTED_MODULE_2__["DefaultEditorSize"].LARGE
   },
   options: {
     showTimePicker: false,
@@ -610,40 +627,6 @@ class MarkdownPlugin {
 
 /***/ }),
 
-/***/ "./public/settings_options_lazy.tsx":
-/*!******************************************!*\
-  !*** ./public/settings_options_lazy.tsx ***!
-  \******************************************/
-/*! exports provided: SettingsOptions */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingsOptions", function() { return SettingsOptions; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _elastic_eui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @elastic/eui */ "@elastic/eui");
-/* harmony import */ var _elastic_eui__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emotion/react */ "@emotion/react");
-/* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_emotion_react__WEBPACK_IMPORTED_MODULE_2__);
-/*
- * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
- * or more contributor license agreements. Licensed under the Elastic License
- * 2.0 and the Server Side Public License, v 1; you may not use this file except
- * in compliance with, at your election, the Elastic License 2.0 or the Server
- * Side Public License, v 1.
- */
-
- // @ts-ignore
-
-
-const SettingsOptionsComponent = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["lazy"])(() => __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./settings_options */ "./public/settings_options.tsx")));
-const SettingsOptions = props => Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(react__WEBPACK_IMPORTED_MODULE_0__["Suspense"], {
-  fallback: Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiLoadingSpinner"], null)
-}, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(SettingsOptionsComponent, props));
-
-/***/ }),
-
 /***/ "./public/to_ast.ts":
 /*!**************************!*\
   !*** ./public/to_ast.ts ***!
@@ -668,12 +651,14 @@ const toExpressionAst = vis => {
   const {
     markdown,
     fontSize,
-    openLinksInNewTab
+    openLinksInNewTab,
+    controlLabel
   } = vis.params;
   const markdownVis = Object(_src_plugins_expressions_public__WEBPACK_IMPORTED_MODULE_0__["buildExpressionFunction"])('markdownVis', {
     markdown,
     font: Object(_src_plugins_expressions_public__WEBPACK_IMPORTED_MODULE_0__["buildExpression"])(`font size=${fontSize}`),
-    openLinksInNewTab
+    openLinksInNewTab,
+    controlLabel
   });
   const ast = Object(_src_plugins_expressions_public__WEBPACK_IMPORTED_MODULE_0__["buildExpression"])([markdownVis]);
   return ast.toAst();
@@ -711,17 +696,6 @@ module.exports = __kbnSharedDeps__.EmotionReact;
 /***/ (function(module, exports) {
 
 module.exports = __kbnSharedDeps__.KbnI18n;
-
-/***/ }),
-
-/***/ "@kbn/i18n-react":
-/*!*************************************************!*\
-  !*** external "__kbnSharedDeps__.KbnI18nReact" ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = __kbnSharedDeps__.KbnI18nReact;
 
 /***/ }),
 
