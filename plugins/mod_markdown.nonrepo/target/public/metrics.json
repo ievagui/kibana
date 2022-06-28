@@ -7,13 +7,13 @@
   {
     "group": "page load bundle size",
     "id": "modMarkdown",
-    "value": 35608,
+    "value": 36836,
     "limitConfigPath": "node_modules/@kbn/optimizer/limits.yml"
   },
   {
     "group": "async chunks size",
     "id": "modMarkdown",
-    "value": 36605
+    "value": 36859
   },
   {
     "group": "async chunk count",

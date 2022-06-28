@@ -1,10 +1,10 @@
 {
   "id": "modMarkdown",
   "owner": {
-    "name": "Kibana Presentation",
+    "name": "ieva",
     "githubTeam": ""
   },
-  "description": "Adds a markdown visualization type",
+  "description": "Implements call to an external API",
   "version": "kibana",
   "ui": true,
   "server": true,

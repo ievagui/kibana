@@ -12,12 +12,14 @@ export interface Arguments {
   markdown: string;
   font: Style;
   openLinksInNewTab: boolean;
+  convertToKQLQuery: boolean;
   controlLabel: string;
 }
 
 export interface MarkdownVisParams {
   markdown: Arguments['markdown'];
   openLinksInNewTab: Arguments['openLinksInNewTab'];
+  convertToKQLQuery: Arguments['convertToKQLQuery'];
   fontSize: number;
   controlLabel: Arguments['controlLabel'];
 }

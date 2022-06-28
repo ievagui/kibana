@@ -52,6 +52,13 @@ export const createMarkdownVisFn = (): MarkdownVisExpressionFunctionDefinition =
         defaultMessage: 'Opens links in new tab',
       }),
     },
+    convertToKQLQuery: {
+      types: ['boolean'],
+      default: false,
+      help: i18n.translate('visTypeMarkdown.function.convertToKQLQuery.help', {
+        defaultMessage: 'Format API response into KQL query',
+      }),
+    },
     controlLabel: {
       types: ['string'],
       required: true,
@@ -69,6 +76,7 @@ export const createMarkdownVisFn = (): MarkdownVisExpressionFunctionDefinition =
         visParams: {
           markdown: args.markdown,
           openLinksInNewTab: args.openLinksInNewTab,
+          convertToKQLQuery: args.convertToKQLQuery,
           fontSize: parseInt(args.font.spec.fontSize || '12', 10),
           controlLabel: args.controlLabel,
         },

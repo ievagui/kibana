@@ -320,6 +320,13 @@ const createMarkdownVisFn = () => ({
         defaultMessage: 'Opens links in new tab'
       })
     },
+    convertToKQLQuery: {
+      types: ['boolean'],
+      default: false,
+      help: _kbn_i18n__WEBPACK_IMPORTED_MODULE_0__["i18n"].translate('visTypeMarkdown.function.convertToKQLQuery.help', {
+        defaultMessage: 'Format API response into KQL query'
+      })
+    },
     controlLabel: {
       types: ['string'],
       required: true,
@@ -338,6 +345,7 @@ const createMarkdownVisFn = () => ({
         visParams: {
           markdown: args.markdown,
           openLinksInNewTab: args.openLinksInNewTab,
+          convertToKQLQuery: args.convertToKQLQuery,
           fontSize: parseInt(args.font.spec.fontSize || '12', 10),
           controlLabel: args.controlLabel
         }
@@ -363,8 +371,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _elastic_eui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @elastic/eui */ "@elastic/eui");
 /* harmony import */ var _elastic_eui__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emotion/react */ "@emotion/react");
-/* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_emotion_react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _src_plugins_vis_default_editor_public__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../src/plugins/vis_default_editor/public */ "plugin/visDefaultEditor/public");
+/* harmony import */ var _src_plugins_vis_default_editor_public__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_src_plugins_vis_default_editor_public__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emotion/react */ "@emotion/react");
+/* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_emotion_react__WEBPACK_IMPORTED_MODULE_3__);
 /*
  * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
  * or more contributor license agreements. Licensed under the Elastic License
@@ -372,6 +382,7 @@ __webpack_require__.r(__webpack_exports__);
  * in compliance with, at your election, the Elastic License 2.0 or the Server
  * Side Public License, v 1.
  */
+
 
 
 
@@ -390,28 +401,28 @@ function MarkdownOptions({
       value
     }
   }) => setValue('controlLabel', value), [setValue]);
-  return Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiPanel"], {
+  return Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiPanel"], {
     paddingSize: "s"
-  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexGroup"], {
+  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexGroup"], {
     direction: "column",
     gutterSize: "m",
     className: "mkdEditor"
-  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexItem"], {
+  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexItem"], {
     grow: false
-  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexGroup"], {
+  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexGroup"], {
     gutterSize: "none",
     justifyContent: "spaceBetween",
     alignItems: "baseline"
-  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexItem"], {
+  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexItem"], {
     grow: false
-  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiTitle"], {
+  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiTitle"], {
     size: "xs"
-  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])("h2", null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])("label", {
+  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])("h2", null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])("label", {
     htmlFor: "markdownVisInput"
-  }, "API")))))), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexItem"], null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFormRow"], {
+  }, "API")))))), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexItem"], null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFormRow"], {
     fullWidth: true,
     label: "Link to API"
-  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFieldText"], {
+  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFieldText"], {
     id: "markdownVisInput",
     className: "visEditor--markdown__textarea",
     value: stateParams.markdown,
@@ -419,17 +430,22 @@ function MarkdownOptions({
     fullWidth: true,
     "data-test-subj": "markdownTextarea",
     resize: "none"
-  }))), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexItem"], null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFormRow"], {
+  }))), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexItem"], null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFormRow"], {
     fullWidth: true,
     label: "Control Label"
-  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFieldText"], {
+  }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFieldText"], {
     id: "markdownVisInput",
     fullWidth: true,
     value: stateParams.controlLabel,
     onChange: onControlLabelUpdate,
     "data-test-subj": "markdownTextarea",
     resize: "none"
-  })))));
+  }))), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_1__["EuiFlexItem"], null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_src_plugins_vis_default_editor_public__WEBPACK_IMPORTED_MODULE_2__["SwitchOption"], {
+    label: "Convert to KQL query",
+    paramName: "convertToKQLQuery",
+    value: stateParams.convertToKQLQuery,
+    setValue: setValue
+  }))));
 }
 
 
@@ -541,6 +557,7 @@ const markdownVisDefinition = {
     defaults: {
       fontSize: 12,
       openLinksInNewTab: false,
+      convertToKQLQuery: false,
       markdown: '',
       controlLabel: ''
     }
@@ -652,12 +669,14 @@ const toExpressionAst = vis => {
     markdown,
     fontSize,
     openLinksInNewTab,
+    convertToKQLQuery,
     controlLabel
   } = vis.params;
   const markdownVis = Object(_src_plugins_expressions_public__WEBPACK_IMPORTED_MODULE_0__["buildExpressionFunction"])('markdownVis', {
     markdown,
     font: Object(_src_plugins_expressions_public__WEBPACK_IMPORTED_MODULE_0__["buildExpression"])(`font size=${fontSize}`),
     openLinksInNewTab,
+    convertToKQLQuery,
     controlLabel
   });
   const ast = Object(_src_plugins_expressions_public__WEBPACK_IMPORTED_MODULE_0__["buildExpression"])([markdownVis]);

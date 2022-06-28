@@ -21,6 +21,7 @@ import {
 import { FormattedMessage } from '@kbn/i18n-react';
 
 import { VisEditorOptionsProps } from '../../../src/plugins/visualizations/public';
+import { SwitchOption } from '../../../src/plugins/vis_default_editor/public';
 import { MarkdownVisParams } from './types';
 
 function MarkdownOptions({ stateParams, setValue }: VisEditorOptionsProps<MarkdownVisParams>) {
@@ -73,6 +74,14 @@ function MarkdownOptions({ stateParams, setValue }: VisEditorOptionsProps<Markdo
             />
           </EuiFormRow>
         </EuiFlexItem>
+        <EuiFlexItem>
+          <SwitchOption
+            label="Convert to KQL query"
+            paramName="convertToKQLQuery"
+            value={stateParams.convertToKQLQuery}
+            setValue={setValue}
+          />
+      </EuiFlexItem>
       </EuiFlexGroup>
     </EuiPanel>
   );

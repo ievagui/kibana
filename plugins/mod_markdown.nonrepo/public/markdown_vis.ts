@@ -33,6 +33,7 @@ export const markdownVisDefinition: VisTypeDefinition<MarkdownVisParams> = {
     defaults: {
       fontSize: 12,
       openLinksInNewTab: false,
+      convertToKQLQuery: false,
       markdown: '',
       controlLabel: '',
     },

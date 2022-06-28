@@ -35,6 +35,7 @@ import {
   EuiPanel,
   EuiSpacer,
   EuiCodeBlock,
+  EuiSelect,
 } from '@elastic/eui';
 
 interface MarkdownVisComponentProps extends MarkdownVisParams {
@@ -75,7 +76,7 @@ class MarkdownVisClass extends React.Component{
     this.state = {
       value: '',
       buttonPushed: false,
-      age: '',
+      id: '',
     };
     this.onClickHandler = this.onClickHandler.bind(this);
     //this.onHandleChange = this.onHandleChange.bind(this);
@@ -86,7 +87,7 @@ class MarkdownVisClass extends React.Component{
   //}
 
   private onClickHandler() {
-    this.getAge(this.state.value);
+    this.getId(this.state.value);
     this.setState({buttonPushed: true});
   }
 
@@ -95,16 +96,16 @@ class MarkdownVisClass extends React.Component{
   //  event.preventDefault();
   //}
 
-  private getAge(val){
+  private getId(val){
     //fetch("https://api.agify.io/?name=" + val)
     fetch(this.props.markdown + val)
       .then(res => res.json())
       .then(
         (response) => {
           if(response.age != null){
-            this.setState({age: response.age});
+            this.setState({id: response.age});
           }else{
-            this.setState({age: ""});
+            this.setState({id: ""});
           }
         });
   }
@@ -128,13 +129,20 @@ class MarkdownVisClass extends React.Component{
   //{return(<p>hello</p>);}
   {
     let label;
+    let text;
     if(this.props.controlLabel == ""){
       label = "label";
     } else {
       label = this.props.controlLabel;
     }
+    if(this.props.convertToKQLQuery){
+      text = "client_id.keyword: ";
+    } else {
+      text = "";
+    }
     return (
       <div className="mkdVis" style={{ fontSize: `${this.props.fontSize}pt` }}>
+      <EuiForm>
         <EuiFormRow fullWidth label={label}>
           <EuiFlexGroup>
             <EuiFlexItem>
@@ -156,12 +164,13 @@ class MarkdownVisClass extends React.Component{
             </EuiFlexItem>
           </EuiFlexGroup>
         </EuiFormRow>
+        </EuiForm>
         <EuiSpacer size="m" />
-        {this.state.buttonPushed && this.state.age ?
+        {this.state.buttonPushed && this.state.id ?
           <EuiFlexGroup gutterSize="none">
             <EuiFlexItem fullWidth>
               <EuiCodeBlock fontSize="m" paddingSize="m" isCopyable>
-                client_id.keyword: "{this.state.age}"
+                {text}{this.state.id}
               </EuiCodeBlock>
             </EuiFlexItem>
           </EuiFlexGroup> :
@@ -178,3 +187,4 @@ export { MarkdownVisClass as default};
 //<p>aa{this.aa.markdown}bb</p>
 //<div className="testClass" style={{"background-color":"#e6f0f7"}}>
 //<EuiFlexItem>Predicted age: {this.state.age}</EuiFlexItem>
+//client_id.keyword: "{this.state.id}"

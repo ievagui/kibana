@@ -556,7 +556,7 @@ class MarkdownVisClass extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
     this.state = {
       value: '',
       buttonPushed: false,
-      age: ''
+      id: ''
     };
     this.onClickHandler = this.onClickHandler.bind(this); //this.onHandleChange = this.onHandleChange.bind(this);
   } //private MarkdownVisComponent({fontSize, markdown, openLinksInNewTab, renderComplete,}: MarkdownVisComponentProps){
@@ -565,7 +565,7 @@ class MarkdownVisClass extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
 
 
   onClickHandler() {
-    this.getAge(this.state.value);
+    this.getId(this.state.value);
     this.setState({
       buttonPushed: true
     });
@@ -575,16 +575,16 @@ class MarkdownVisClass extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
   //}
 
 
-  getAge(val) {
+  getId(val) {
     //fetch("https://api.agify.io/?name=" + val)
     fetch(this.props.markdown + val).then(res => res.json()).then(response => {
       if (response.age != null) {
         this.setState({
-          age: response.age
+          id: response.age
         });
       } else {
         this.setState({
-          age: ""
+          id: ""
         });
       }
     });
@@ -609,6 +609,7 @@ class MarkdownVisClass extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
   render() //{return(<p>hello</p>);}
   {
     let label;
+    let text;
 
     if (this.props.controlLabel == "") {
       label = "label";
@@ -616,12 +617,18 @@ class MarkdownVisClass extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       label = this.props.controlLabel;
     }
 
+    if (this.props.convertToKQLQuery) {
+      text = "client_id.keyword: ";
+    } else {
+      text = "";
+    }
+
     return Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
       className: "mkdVis",
       style: {
         fontSize: `${this.props.fontSize}pt`
       }
-    }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiFormRow"], {
+    }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiForm"], null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiFormRow"], {
       fullWidth: true,
       label: label
     }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiFlexGroup"], null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiFlexItem"], null, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiFieldText"], {
@@ -637,9 +644,9 @@ class MarkdownVisClass extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
     }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiButton"] //fill
     , {
       onClick: this.onClickHandler
-    }, "Search")))), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiSpacer"], {
+    }, "Search"))))), Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiSpacer"], {
       size: "m"
-    }), this.state.buttonPushed && this.state.age ? Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiFlexGroup"], {
+    }), this.state.buttonPushed && this.state.id ? Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiFlexGroup"], {
       gutterSize: "none"
     }, Object(_emotion_react__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_elastic_eui__WEBPACK_IMPORTED_MODULE_2__["EuiFlexItem"], {
       fullWidth: true
@@ -647,7 +654,7 @@ class MarkdownVisClass extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       fontSize: "m",
       paddingSize: "m",
       isCopyable: true
-    }, "client_id.keyword: \"", this.state.age, "\""))) : null);
+    }, text, this.state.id))) : null);
   }
 
 } //}
@@ -658,6 +665,7 @@ class MarkdownVisClass extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
  //<p>aa{this.aa.markdown}bb</p>
 //<div className="testClass" style={{"background-color":"#e6f0f7"}}>
 //<EuiFlexItem>Predicted age: {this.state.age}</EuiFlexItem>
+//client_id.keyword: "{this.state.id}"
 
 /***/ })
 
