@@ -1,0 +1,3 @@
+[submodule "plugins/mod_markdown"]
+	path = plugins/mod_markdown
+	url = https://github.com/ievagui/kibana-api-call.git
